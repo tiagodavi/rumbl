@@ -16,11 +16,11 @@ defmodule Rumbl.Repo do
   def all(_module), do: []
 
   def get(module, id) do 
-  	Enum.find all(module), &(&1.id == id)
+  	Enum.find all(module), struct(module), &(&1.id == id)
   end
 
   def get_by(module, params) do 
-  	Enum.find all(module), fn map ->
+  	Enum.find all(module), struct(module), fn map ->
   		Enum.all? params, fn {key, val} -> Map.get(map, key) == val end
   	end
   end

@@ -3,8 +3,9 @@ defmodule Rumbl.UserView do
 	alias Rumbl.User
 
 	def first_name(%User{name: name}) do
-		name
-		|> String.split(" ")
-		|> Enum.at(0)
-	end
+		cond do 
+			is_binary name -> name|>String.split(" ")|>Enum.at(0)
+			true -> ""			
+		end 		
+	end	
 end
