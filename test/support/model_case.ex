@@ -20,6 +20,7 @@ defmodule Rumbl.ModelCase do
       import Ecto.Model
       import Ecto.Query, only: [from: 2]
       import Rumbl.ModelCase
+      import Rumbl.TestHelpers
     end
   end
 
