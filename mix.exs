@@ -36,7 +36,8 @@ defmodule Rumbl.Mixfile do
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:comeonin, "~> 1.2"}
+     {:comeonin, "~> 1.2"},
+     {:sweet_xml, "~> 0.5.0"},
    ]
   end
 
